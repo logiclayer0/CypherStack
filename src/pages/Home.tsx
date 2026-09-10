@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { APP_NAME, ROUTES } from '../utils/constants'
+import { ROUTES } from '../utils/constants'
 
 function Home() {
   return (
