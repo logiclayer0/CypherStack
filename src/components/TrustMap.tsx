@@ -130,7 +130,7 @@ function TrustMap({ nodes, links, height = 500 }: Props) {
           .duration(150)
           .attr('r', (dd: any) => 20 + dd.score / 8)
       })
-      .on('mouseleave', function (_event: any) {
+      .on('mouseleave', function (_, d: any) {
         setHovered(null)
         d3.select(this)
           .select('circle')
