@@ -173,39 +173,38 @@ Each score is computed from weighted factors totaling 100 points.
 
 ## Screenshots
 
-
 ### Home Page
-![Home Hero](docs/screenshots/Screenshot%202026-09-10%20184314.png)
+![Home Hero](screenshots/Screenshot%202026-09-10%20184314.png)
 
 ### Home Page — Full View
-![Home Full](docs/screenshots/Screenshot%202026-09-10%20184320.png)
+![Home Full](screenshots/Screenshot%202026-09-10%20184320.png)
 
 ### Bitcoin Address Scoring
-![Bitcoin Scoring](docs/screenshots/Screenshot%202026-09-10%20184347.png)
+![Bitcoin Scoring](screenshots/Screenshot%202026-09-10%20184347.png)
 
 ### Live Trust Graph
-![Trust Graph](docs/screenshots/Screenshot%202026-09-10%20184359.png)
+![Trust Graph](screenshots/Screenshot%202026-09-10%20184359.png)
 
 ### Score History and Activity Feed
-![History and Activity](docs/screenshots/Screenshot%202026-09-10%20184406.png)
+![History and Activity](screenshots/Screenshot%202026-09-10%20184406.png)
 
 ### Zero-Knowledge Proof — Threshold Selection
-![ZK Threshold](docs/screenshots/Screenshot%202026-09-10%20184426.png)
+![ZK Threshold](screenshots/Screenshot%202026-09-10%20184426.png)
 
 ### Zero-Knowledge Proof — Generated
-![ZK Generated](docs/screenshots/Screenshot%202026-09-10%20184433.png)
+![ZK Generated](screenshots/Screenshot%202026-09-10%20184433.png)
 
 ### Nostr Identity Trust
-![Nostr Profile](docs/screenshots/Screenshot%202026-09-10%20184519.png)
+![Nostr Profile](screenshots/Screenshot%202026-09-10%20184519.png)
 
 ### Compare Addresses
-![Compare](docs/screenshots/Screenshot%202026-09-10%20184604.png)
+![Compare](screenshots/Screenshot%202026-09-10%20184604.png)
 
 ### AI Agent Verification — Input
-![Agent Input](docs/screenshots/Screenshot%202026-09-10%20184712.png)
+![Agent Input](screenshots/Screenshot%202026-09-10%20184712.png)
 
 ### AI Agent Verification — Result
-![Agent Result](docs/screenshots/Screenshot%202026-09-10%20184718.png)
+![Agent Result](screenshots/Screenshot%202026-09-10%20184718.png)
 
 ---
 
@@ -254,6 +253,11 @@ cypherstack/
 +-- public/
 |   +-- favicon.ico
 |   +-- logo.svg
+|
++-- screenshots/
+|   +-- Screenshot 2026-09-10 184314.png
+|   +-- Screenshot 2026-09-10 184320.png
+|   +-- ... (11 screenshots total)
 |
 +-- src/
 |   |
