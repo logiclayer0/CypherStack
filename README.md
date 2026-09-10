@@ -4,7 +4,9 @@
 
 A Bitcoin-native trust layer that scores Bitcoin addresses, Nostr identities, and AI agents using only public data — no KYC, no oracles, no gatekeepers.
 
-**Live Demo:** [https://cypherstack-woad.vercel.app/](https://cypherstack-woad.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit-22c55e?style=for-the-badge)](https://cypherstack-woad.vercel.app/)
+[![License](https://img.shields.io/badge/License-MIT-f7931a?style=for-the-badge)](LICENSE)
+[![Built For](https://img.shields.io/badge/BOSS_Battle-2026-8b5cf6?style=for-the-badge)](https://cypherstack-woad.vercel.app/)
 
 ---
 
@@ -14,7 +16,7 @@ Bitcoin has transparency, but no trust. Nostr has identity, but no verification.
 
 Today, you cannot tell if a Bitcoin address is a scammer, if a Nostr profile is a bot, or if an AI agent is reliable.
 
-There is no native trust system that spans these three networks.
+**There is no native trust system that spans these three networks.**
 
 ---
 
@@ -22,9 +24,11 @@ There is no native trust system that spans these three networks.
 
 CypherStack computes trust scores from public data across three layers:
 
-- **Bitcoin addresses** — analyzed using on-chain history, transaction volume, and flow stability
-- **Nostr identities** — derived from follower networks, NIP-05 verification, and profile completeness
-- **AI agents** — scored by task completion, success rate, age, and staked collateral
+| Layer | Signal Source | What It Measures |
+|-------|--------------|------------------|
+| **Bitcoin** | On-chain history | Transaction patterns, volume, stability |
+| **Nostr** | Social graph | Followers, NIP-05, profile completeness |
+| **AI Agents** | Performance record | Task history, success rate, staked collateral |
 
 Scores are transparent, deterministic, and computed entirely from public information. No personal data. No identity providers. No gatekeepers.
 
@@ -32,29 +36,48 @@ Scores are transparent, deterministic, and computed entirely from public informa
 
 ## Features
 
-- **Multi-layer reputation engine** — Bitcoin, Nostr, and AI agents in one platform
+### Core Reputation Engine
+
+- **Multi-layer scoring** — one platform for Bitcoin, Nostr, and AI agents
+- **Weighted factor model** — transparent scoring with visible factor breakdowns
+- **Trust tiers** — Gold, Silver, Bronze, Risky classification
+- **Real-time data** — live queries to mempool.space and Nostr relays
+
+### Privacy
+
 - **Zero-knowledge proofs** — prove your reputation exceeds a threshold without revealing the exact score
-- **Live trust graph** — interactive D3 force-directed visualization of connected entities
-- **Score history** — track how reputation evolves over time
-- **Side-by-side comparison** — compare two Bitcoin addresses in real time
+- **No personal data** — all scoring happens locally in the browser
+- **No tracking** — activity stored in `localStorage`, never leaves your device
+- **No accounts** — no sign-ups, no emails, no identity providers
+
+### Visualization
+
+- **Live trust graph** — interactive D3 force-directed network
+- **Drag-and-drop nodes** — explore connections between entities
+- **Score history chart** — track how reputation evolves over time
+- **Activity feed** — real-time log of your recent verifications
+
+### Advanced Tooling
+
+- **Side-by-side comparison** — compare two Bitcoin addresses instantly
 - **Shareable results** — every score has a verifiable share link
-- **Cross-layer reputation bridge** — link Bitcoin and Nostr trust without KYC
 - **Multi-relay Nostr fallback** — queries three relays in parallel with graceful degradation
+- **Cross-layer reputation bridge** — link Bitcoin and Nostr trust without KYC
 
 ---
 
 ## Live Demo
 
-**URL:** [https://cypherstack-woad.vercel.app/](https://cypherstack-woad.vercel.app/)
+**Try it now:** [https://cypherstack-woad.vercel.app/](https://cypherstack-woad.vercel.app/)
 
-### Try It
+### Example Inputs
 
-| Section | Example Input |
-|---------|---------------|
+| Section | Try This |
+|---------|----------|
 | **Bitcoin** | `bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh` |
 | **Nostr** | `3bf0c63fcb93463407af97a5e5ee64fa883d107ef9e558472c4eb9aaaefa459d` |
-| **Compare** | Two addresses side-by-side |
-| **AI Agent** | Any custom parameters |
+| **Compare** | Any two Bitcoin addresses side-by-side |
+| **AI Agent** | Any custom parameters (name, tasks, rate, age, stake) |
 
 ---
 
@@ -62,46 +85,46 @@ Scores are transparent, deterministic, and computed entirely from public informa
 
 | Layer | Technology |
 |-------|-----------|
-| Frontend | React 18, TypeScript, Vite |
-| Routing | React Router v6 |
-| Visualization | D3.js |
-| Bitcoin Data | mempool.space API |
-| Nostr Protocol | Native WebSocket, NIP-01 and NIP-02 |
-| Storage | Browser localStorage |
-| Styling | Inline CSS with custom design system |
-| Deployment | Vercel |
+| **Frontend** | React 18, TypeScript, Vite |
+| **Routing** | React Router v6 |
+| **Visualization** | D3.js |
+| **Bitcoin Data** | mempool.space API |
+| **Nostr Protocol** | Native WebSocket, NIP-01 and NIP-02 |
+| **Storage** | Browser localStorage |
+| **Styling** | Inline CSS with custom design system |
+| **Deployment** | Vercel |
 
 ---
 
 ## Architecture
 
 ```
-User Input
-    |
-    v
-+----------------------------------+
-|  Bitcoin  |  Nostr  |  AI Agent  |
-+-----------------+----------------+
-                  |
-                  v
-         Data Fetchers
-      (mempool.space, relays)
-                  |
-                  v
-         Reputation Engine
-       (weighted scoring factors)
-                  |
-                  v
-         Trust Tier Output
-      (Gold | Silver | Bronze | Risky)
-                  |
-                  v
-           UI Components
-   (ScoreCard, TrustMap, ZK Proof, Charts)
-                  |
-                  v
-        Cross-Layer Bridge
-       (Bitcoin <-> Nostr <-> AI)
+                        User Input
+                            |
+                            v
+        +---------------------------------------+
+        |   Bitcoin   |   Nostr   |   AI Agent |
+        +------------------+--------------------+
+                           |
+                           v
+                    Data Fetchers
+              (mempool.space, Nostr relays)
+                           |
+                           v
+                  Reputation Engine
+              (weighted scoring factors)
+                           |
+                           v
+                  Trust Tier Output
+              (Gold | Silver | Bronze | Risky)
+                           |
+                           v
+                    UI Components
+        (ScoreCard, TrustMap, ZK Proof, Charts)
+                           |
+                           v
+                  Cross-Layer Bridge
+                (Bitcoin <-> Nostr <-> AI)
 ```
 
 ---
@@ -139,19 +162,19 @@ Each score is computed from weighted factors totaling 100 points.
 
 ### Trust Tiers
 
-| Score Range | Tier |
-|-------------|------|
-| 80 - 100 | Gold |
-| 60 - 79 | Silver |
-| 40 - 59 | Bronze |
-| 0 - 39 | Risky |
+| Score Range | Tier | Meaning |
+|-------------|------|---------|
+| 80 – 100 | Gold | Highly trusted |
+| 60 – 79 | Silver | Generally trusted |
+| 40 – 59 | Bronze | Moderate trust |
+| 0 – 39 | Risky | Low trust, caution advised |
 
 ---
 
 ## Screenshots
 
 ### Home Page
-![Home](docs/screenshots/01-home-hero.png)
+![Home Hero](docs/screenshots/01-home-hero.png)
 
 ### Home Page — Full View
 ![Home Full](docs/screenshots/02-home-full.png)
@@ -163,7 +186,7 @@ Each score is computed from weighted factors totaling 100 points.
 ![Trust Graph](docs/screenshots/04-trust-graph.png)
 
 ### Score History and Activity Feed
-![History Feed](docs/screenshots/05-score-history-activity.png)
+![History and Activity](docs/screenshots/05-score-history-activity.png)
 
 ### Zero-Knowledge Proof — Threshold Selection
 ![ZK Threshold](docs/screenshots/06-zk-proof-threshold.png)
@@ -172,7 +195,7 @@ Each score is computed from weighted factors totaling 100 points.
 ![ZK Generated](docs/screenshots/07-zk-proof-generated.png)
 
 ### Nostr Identity Trust
-![Nostr](docs/screenshots/08-nostr-profile.png)
+![Nostr Profile](docs/screenshots/08-nostr-profile.png)
 
 ### Compare Addresses
 ![Compare](docs/screenshots/09-compare.png)
@@ -289,9 +312,11 @@ CypherStack uses **only public data**. No personal information is collected, tra
 
 Built for **BOSS Battle 2026** — covering three tracks:
 
-- **Privacy** — zero-knowledge proofs for reputation without disclosure
-- **Nostr** — multi-relay identity trust and social graph analysis
-- **AI** — verifiable trust scoring for autonomous agents
+| Track | How CypherStack Delivers |
+|-------|-------------------------|
+| **Privacy** | Zero-knowledge proofs for reputation without disclosure |
+| **Nostr** | Multi-relay identity trust and social graph analysis |
+| **AI** | Verifiable trust scoring for autonomous agents |
 
 ---
 
