@@ -174,37 +174,37 @@ Each score is computed from weighted factors totaling 100 points.
 ## Screenshots
 
 ### Home Page
-![Home](screenshots/01-home-hero.png)
+![Home](screenshots/01-home-hero.png.png)
 
 ### Home Page — Full View
-![Home Full](screenshots/02-home-full.png)
+![Home Full](screenshots/02-home-full.png.png)
 
 ### Bitcoin Address Scoring
-![Bitcoin Scoring](screenshots/03-bitcoin-scoring.png)
+![Bitcoin Scoring](screenshots/03-bitcoin-scoring.png.png)
 
 ### Live Trust Graph
-![Trust Graph](screenshots/04-trust-graph.png)
+![Trust Graph](screenshots/04-trust-graph.png.png)
 
 ### Score History and Activity Feed
-![History Feed](screenshots/05-score-history-activity.png)
+![History Feed](screenshots/05-score-history-activity.png.png)
 
 ### Zero-Knowledge Proof — Threshold Selection
-![ZK Threshold](screenshots/06-zk-proof-threshold.png)
+![ZK Threshold](screenshots/06-zk-proof-threshold.png.png)
 
 ### Zero-Knowledge Proof — Generated
-![ZK Generated](screenshots/07-zk-proof-generated.png)
+![ZK Generated](screenshots/07-zk-proof-generated.png.png)
 
 ### Nostr Identity Trust
-![Nostr](screenshots/08-nostr-profile.png)
+![Nostr](screenshots/08-nostr-profile.png.png)
 
 ### Compare Addresses
-![Compare](screenshots/09-compare.png)
+![Compare](screenshots/09-compare.png.png)
 
 ### AI Agent Verification — Input
-![Agent Input](screenshots/10-ai-agent-input.png)
+![Agent Input](screenshots/10-ai-agent-input.png.png)
 
 ### AI Agent Verification — Result
-![Agent Result](screenshots/11-ai-agent-result.png)
+![Agent Result](screenshots/11-ai-agent-result.png.png)
 
 ---
 
