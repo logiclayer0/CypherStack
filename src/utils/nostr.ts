@@ -47,7 +47,6 @@ async function queryRelay(
     }, timeoutMs)
 
     const subId = 's-' + Math.random().toString(36).slice(2, 10)
-    let eoseReceived = false
 
     socket.onopen = () => {
       try {
@@ -79,7 +78,6 @@ async function queryRelay(
           events.push(message[2])
         }
         if (message[0] === 'EOSE' && message[1].startsWith(subId)) {
-          eoseReceived = true
           if (events.length > 0) {
             resolved = true
             clearTimeout(timer)
