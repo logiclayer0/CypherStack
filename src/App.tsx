@@ -7,7 +7,6 @@ import NostrProfile from './pages/NostrProfile'
 import AgentVerify from './pages/AgentVerify'
 import Compare from './pages/Compare'
 import NotFound from './pages/NotFound'
-
 function App() {
   return (
     <>
