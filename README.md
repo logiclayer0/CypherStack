@@ -171,6 +171,13 @@ Each score is computed from weighted factors totaling 100 points.
 
 ---
 
+## Demo Video
+
+[![Watch CypherStack Demo](screenshots/01-home-hero.png)](https://github.com/logiclaya0/CypherStack/raw/main/cypherstack.mp4)
+
+**▶ [Watch the full demo](https://github.com/logiclaya0/CypherStack/raw/main/cypherstack.mp4)** — Bitcoin, Nostr, AI agent scoring in action
+
+
 ## Screenshots
 
 ### Home Page
