@@ -1,33 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <linearGradient id="outerHex" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f7931a"/>
-      <stop offset="50%" stop-color="#ffab3d"/>
-      <stop offset="100%" stop-color="#f7931a"/>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffab3d"/>
+      <stop offset="50%" stop-color="#f7931a"/>
+      <stop offset="100%" stop-color="#c47000"/>
     </linearGradient>
-    <linearGradient id="innerHex" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#8b5cf6"/>
       <stop offset="100%" stop-color="#f7931a"/>
     </linearGradient>
-    <linearGradient id="coreGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="50%" stop-color="#f7931a"/>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7931a"/>
+      <stop offset="50%" stop-color="#22c55e"/>
       <stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
-    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#f7931a" stop-opacity="0.15"/>
-      <stop offset="70%" stop-color="#8b5cf6" stop-opacity="0.05"/>
-      <stop offset="100%" stop-color="#0a0a0f" stop-opacity="0"/>
+    <radialGradient id="shieldBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
     </radialGradient>
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
+    <filter id="shieldGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <filter id="hardGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+    <filter id="deepGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -36,56 +35,51 @@
   </defs>
 
   <rect width="512" height="512" rx="110" fill="#0a0a0f"/>
-  <rect width="512" height="512" rx="110" fill="url(#bgGlow)"/>
+  <rect width="512" height="512" rx="110" fill="url(#shieldBg)"/>
 
-  <polygon points="256,60 400,144 400,312 256,396 112,312 112,144"
-           fill="none"
-           stroke="url(#outerHex)"
-           stroke-width="10"
-           stroke-linejoin="round"
-           filter="url(#softGlow)"/>
+  <circle cx="256" cy="256" r="200" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.15"/>
+  <circle cx="256" cy="256" r="170" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.1"/>
+  <circle cx="256" cy="256" r="140" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.08"/>
 
-  <polygon points="256,60 400,144 400,312 256,396 112,312 112,144"
-           fill="none"
-           stroke="#f7931a"
-           stroke-width="2"
-           stroke-linejoin="round"
-           opacity="0.6"/>
+  <path d="M256 70 L400 130 L400 280 Q400 380 256 440 Q112 380 112 280 L112 130 Z"
+        fill="url(#shieldGrad)"
+        opacity="0.08"
+        stroke="url(#shieldGrad)"
+        stroke-width="8"
+        stroke-linejoin="round"
+        filter="url(#shieldGlow)"/>
 
-  <polygon points="256,110 360,170 360,286 256,346 152,286 152,170"
-           fill="none"
-           stroke="#2a2a38"
-           stroke-width="3"
-           stroke-linejoin="round"/>
+  <path d="M256 70 L400 130 L400 280 Q400 380 256 440 Q112 380 112 280 L112 130 Z"
+        fill="none"
+        stroke="#f7931a"
+        stroke-width="2"
+        stroke-linejoin="round"
+        opacity="0.5"/>
 
-  <line x1="256" y1="110" x2="256" y2="180" stroke="#f7931a" stroke-width="2" opacity="0.4"/>
-  <line x1="360" y1="170" x2="300" y2="205" stroke="#f7931a" stroke-width="2" opacity="0.4"/>
-  <line x1="360" y1="286" x2="300" y2="251" stroke="#f7931a" stroke-width="2" opacity="0.4"/>
-  <line x1="256" y1="346" x2="256" y2="276" stroke="#f7931a" stroke-width="2" opacity="0.4"/>
-  <line x1="152" y1="286" x2="212" y2="251" stroke="#f7931a" stroke-width="2" opacity="0.4"/>
-  <line x1="152" y1="170" x2="212" y2="205" stroke="#f7931a" stroke-width="2" opacity="0.4"/>
+  <path d="M256 130 L360 170 L360 275 Q360 340 256 385 Q152 340 152 275 L152 170 Z"
+        fill="none"
+        stroke="#2a2a38"
+        stroke-width="2.5"
+        stroke-linejoin="round"/>
 
-  <circle cx="256" cy="110" r="10" fill="#f7931a" filter="url(#hardGlow)"/>
-  <circle cx="256" cy="110" r="4" fill="#ffffff"/>
+  <circle cx="256" cy="256" r="70" fill="none" stroke="url(#arcGrad)" stroke-width="14" stroke-linecap="round" stroke-dasharray="330 200" transform="rotate(-90 256 256)" filter="url(#deepGlow)"/>
 
-  <circle cx="360" cy="170" r="10" fill="#8b5cf6" filter="url(#hardGlow)"/>
-  <circle cx="360" cy="170" r="4" fill="#ffffff"/>
+  <circle cx="256" cy="256" r="50" fill="none" stroke="#2a2a38" stroke-width="1.5"/>
+  <circle cx="256" cy="256" r="30" fill="url(#arcGrad)" filter="url(#shieldGlow)"/>
+  <circle cx="256" cy="256" r="16" fill="#0a0a0f"/>
+  <circle cx="256" cy="256" r="7" fill="#ffffff"/>
 
-  <circle cx="360" cy="286" r="10" fill="#f7931a" filter="url(#hardGlow)"/>
-  <circle cx="360" cy="286" r="4" fill="#ffffff"/>
+  <circle cx="256" cy="186" r="8" fill="#f7931a" filter="url(#shieldGlow)"/>
+  <circle cx="318" cy="220" r="8" fill="#8b5cf6" filter="url(#shieldGlow)"/>
+  <circle cx="318" cy="292" r="8" fill="#f7931a" filter="url(#shieldGlow)"/>
+  <circle cx="256" cy="326" r="8" fill="#22c55e" filter="url(#shieldGlow)"/>
+  <circle cx="194" cy="292" r="8" fill="#f7931a" filter="url(#shieldGlow)"/>
+  <circle cx="194" cy="220" r="8" fill="#8b5cf6" filter="url(#shieldGlow)"/>
 
-  <circle cx="256" cy="346" r="10" fill="#22c55e" filter="url(#hardGlow)"/>
-  <circle cx="256" cy="346" r="4" fill="#ffffff"/>
-
-  <circle cx="152" cy="286" r="10" fill="#f7931a" filter="url(#hardGlow)"/>
-  <circle cx="152" cy="286" r="4" fill="#ffffff"/>
-
-  <circle cx="152" cy="170" r="10" fill="#8b5cf6" filter="url(#hardGlow)"/>
-  <circle cx="152" cy="170" r="4" fill="#ffffff"/>
-
-  <circle cx="256" cy="228" r="44" fill="url(#coreGlow)" filter="url(#softGlow)"/>
-  <circle cx="256" cy="228" r="34" fill="#0a0a0f"/>
-  <circle cx="256" cy="228" r="24" fill="url(#coreGlow)"/>
-  <circle cx="256" cy="228" r="12" fill="#0a0a0f"/>
-  <circle cx="256" cy="228" r="5" fill="#ffffff" filter="url(#hardGlow)"/>
+  <line x1="256" y1="186" x2="256" y2="226" stroke="#f7931a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="318" y1="220" x2="280" y2="240" stroke="#8b5cf6" stroke-width="1.5" opacity="0.5"/>
+  <line x1="318" y1="292" x2="280" y2="272" stroke="#f7931a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="256" y1="326" x2="256" y2="286" stroke="#22c55e" stroke-width="1.5" opacity="0.5"/>
+  <line x1="194" y1="292" x2="232" y2="272" stroke="#f7931a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="194" y1="220" x2="232" y2="240" stroke="#8b5cf6" stroke-width="1.5" opacity="0.5"/>
 </svg>
