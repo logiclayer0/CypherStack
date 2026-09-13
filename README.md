@@ -34,6 +34,14 @@ Scores are transparent, deterministic, and computed entirely from public informa
 
 ---
 
+## Demo Video
+
+[![Watch CypherStack Demo](https://img.youtube.com/vi/Dx3D_3vMCGc/maxresdefault.jpg)](https://www.youtube.com/watch?v=Dx3D_3vMCGc)
+
+**▶ [Watch the full demo on YouTube](https://www.youtube.com/watch?v=Dx3D_3vMCGc)** — Bitcoin, Nostr, and AI agent scoring in action
+
+---
+
 ## Features
 
 ### Core Reputation Engine
@@ -171,47 +179,40 @@ Each score is computed from weighted factors totaling 100 points.
 
 ---
 
-## Demo Video
-
-[![Watch CypherStack Demo](screenshots/01-home-hero.png)](https://github.com/logiclaya0/CypherStack/raw/main/cypherstack.mp4)
-
-**▶ [Watch the full demo](https://github.com/logiclaya0/CypherStack/raw/main/cypherstack.mp4)** — Bitcoin, Nostr, AI agent scoring in action
-
-
 ## Screenshots
 
 ### Home Page
-![Home](screeenshots/01-home-hero.png)
+![Home](screenshots/01-home-hero.png)
 
 ### Home Page — Full View
-![Home Full](screeenshots/02-home-full.png)
+![Home Full](screenshots/02-home-full.png)
 
 ### Bitcoin Address Scoring
-![Bitcoin Scoring](screeenshots/03-bitcoin-scoring.png)
+![Bitcoin Scoring](screenshots/03-bitcoin-scoring.png)
 
 ### Live Trust Graph
-![Trust Graph](screeenshots/04-trust-graph.png)
+![Trust Graph](screenshots/04-trust-graph.png)
 
 ### Score History and Activity Feed
-![History Feed](screeenshots/05-score-history-activity.png)
+![History Feed](screenshots/05-score-history-activity.png)
 
 ### Zero-Knowledge Proof — Threshold Selection
-![ZK Threshold](screeenshots/06-zk-proof-threshold.png)
+![ZK Threshold](screenshots/06-zk-proof-threshold.png)
 
 ### Zero-Knowledge Proof — Generated
-![ZK Generated](screeenshots/07-zk-proof-generated.png)
+![ZK Generated](screenshots/07-zk-proof-generated.png)
 
 ### Nostr Identity Trust
-![Nostr](screeenshots/08-nostr-profile.png)
+![Nostr](screenshots/08-nostr-profile.png)
 
 ### Compare Addresses
-![Compare](screeenshots/09-compare.png)
+![Compare](screenshots/09-compare.png)
 
 ### AI Agent Verification — Input
-![Agent Input](screeenshots/10-ai-agent-input.png)
+![Agent Input](screenshots/10-ai-agent-input.png)
 
 ### AI Agent Verification — Result
-![Agent Result](screeenshots/11-ai-agent-result.png)
+![Agent Result](screenshots/11-ai-agent-result.png)
 
 ---
 
@@ -262,9 +263,17 @@ cypherstack/
 |   +-- logo.svg
 |
 +-- screenshots/
-|   +-- Screenshot 2026-09-10 184314.png
-|   +-- Screenshot 2026-09-10 184320.png
-|   +-- ... (11 screenshots total)
+|   +-- 01-home-hero.png
+|   +-- 02-home-full.png
+|   +-- 03-bitcoin-scoring.png
+|   +-- 04-trust-graph.png
+|   +-- 05-score-history-activity.png
+|   +-- 06-zk-proof-threshold.png
+|   +-- 07-zk-proof-generated.png
+|   +-- 08-nostr-profile.png
+|   +-- 09-compare.png
+|   +-- 10-ai-agent-input.png
+|   +-- 11-ai-agent-result.png
 |
 +-- src/
 |   |
