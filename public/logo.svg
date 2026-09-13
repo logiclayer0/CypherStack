@@ -1,16 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
-    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f7931a"/>
-      <stop offset="100%" stop-color="#ffab3d"/>
+      <stop offset="50%" stop-color="#ffab3d"/>
+      <stop offset="100%" stop-color="#f7931a"/>
     </linearGradient>
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#f7931a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#0a0a0f"/>
-  <path d="M32 10 L52 22 L52 42 L32 54 L12 42 L12 22 Z" 
-        fill="none" stroke="url(#grad)" stroke-width="2.5" stroke-linejoin="round"/>
-  <circle cx="32" cy="32" r="6" fill="url(#grad)"/>
-  <circle cx="32" cy="18" r="2.5" fill="#f7931a"/>
-  <circle cx="32" cy="46" r="2.5" fill="#f7931a"/>
-  <circle cx="18" cy="28" r="2.5" fill="#f7931a"/>
-  <circle cx="46" cy="28" r="2.5" fill="#f7931a"/>
+
+  <rect width="200" height="200" rx="40" fill="#0a0a0f"/>
+
+  <polygon points="100,30 155,60 155,120 100,150 45,120 45,60"
+           fill="none"
+           stroke="url(#hexGrad)"
+           stroke-width="5"
+           stroke-linejoin="round"
+           filter="url(#glow)"/>
+
+  <polygon points="100,50 140,72 140,112 100,134 60,112 60,72"
+           fill="none"
+           stroke="#2a2a38"
+           stroke-width="2"/>
+
+  <circle cx="100" cy="92" r="14" fill="url(#coreGrad)" filter="url(#glow)"/>
+  <circle cx="100" cy="92" r="6" fill="#0a0a0f"/>
+
+  <circle cx="100" cy="60" r="4" fill="#f7931a"/>
+  <circle cx="132" cy="78" r="4" fill="#f7931a"/>
+  <circle cx="132" cy="106" r="4" fill="#f7931a"/>
+  <circle cx="100" cy="124" r="4" fill="#f7931a"/>
+  <circle cx="68" cy="106" r="4" fill="#f7931a"/>
+  <circle cx="68" cy="78" r="4" fill="#f7931a"/>
+
+  <line x1="100" y1="60" x2="100" y2="78" stroke="#f7931a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="132" y1="78" x2="114" y2="88" stroke="#f7931a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="132" y1="106" x2="114" y2="96" stroke="#f7931a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="124" x2="100" y2="106" stroke="#f7931a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="68" y1="106" x2="86" y2="96" stroke="#f7931a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="68" y1="78" x2="86" y2="88" stroke="#f7931a" stroke-width="1.5" opacity="0.5"/>
 </svg>
