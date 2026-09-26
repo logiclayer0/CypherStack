@@ -1,7 +1,6 @@
 import { SCORE_THRESHOLDS } from './constants'
 
 export type TrustTier = 'gold' | 'silver' | 'bronze' | 'risky'
-
 export interface ReputationScore {
   score: number
   tier: TrustTier
