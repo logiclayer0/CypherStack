@@ -9,7 +9,6 @@ A Bitcoin-native trust layer that scores Bitcoin addresses, Nostr identities, an
 [![Built For](https://img.shields.io/badge/BOSS_Battle-2026-8b5cf6?style=for-the-badge)](https://cypherstack-woad.vercel.app/)
 
 ---
-
 ## The Problem
 
 Bitcoin has transparency, but no trust. Nostr has identity, but no verification. AI agents have power, but no accountability.
