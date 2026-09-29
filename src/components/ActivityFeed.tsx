@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { getActivity, ActivityItem, timeAgo } from '../utils/activity'
-
 function ActivityFeed() {
   const [items, setItems] = useState<ActivityItem[]>([])
 
