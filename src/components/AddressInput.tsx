@@ -1,11 +1,9 @@
 import { useState } from 'react'
-
 interface Props {
   placeholder: string
   buttonLabel: string
   onSubmit: (value: string) => void
 }
-
 function AddressInput({ placeholder, buttonLabel, onSubmit }: Props) {
   const [value, setValue] = useState('')
 
